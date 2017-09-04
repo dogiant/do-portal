@@ -14,8 +14,6 @@ public class ImageConfig {
 	
     public static String imageUrlPrefix;
 	
-	public static String imageLocalPathPrefix;
-	
 	@Value("${image.url.file_host}")
 	public void setFileHost(String fileHost) {
 		ImageConfig.fileHost = fileHost;
@@ -26,9 +24,6 @@ public class ImageConfig {
 		ImageConfig.imageUrlPrefix = imageUrlPrefix;
 	}
 
-	@Value("${image.local_path.prefix}")
-	public void setImageLocalPathPrefix(String imageLocalPathPrefix) {
-		ImageConfig.imageLocalPathPrefix = imageLocalPathPrefix;
-	}
+
 
 }
