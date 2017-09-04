@@ -14,8 +14,16 @@ public class IndexController {
 	protected final Log logger = LogFactory.getLog(getClass());
 	
 	@RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public String articleCatInput(Map<String, Object> model) {
+    public String index(Map<String, Object> model) {
 		logger.info("/index.html");
+		//栏目定义
+		
+		//版块定义
+		
+		//数据接口
+		// 栏目下文章分页列表
+		// 版块代码获取版块内容
+		// 文章Id获取文章内容   文章栏目获取面包屑栏目列表  
 		
 		model.put("title", "首页");
         return "index";
