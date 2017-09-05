@@ -6,7 +6,7 @@
 	<div class="container">
 		<!-- Logo -->
 		<a class="logo" href="index.html"> <img
-			src="assets/img/logo-opt.jpg" height="50" width="133" alt="Logo">
+			src="/assets/img/logo-opt.jpg" height="50" width="133" alt="Logo">
 		</a>
 		<!-- End Logo -->
 
@@ -19,17 +19,17 @@
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-bars"></span>
             </button>
-            End Toggle -->
+         End Toggle -->
 	</div>
 	<!--/end container-->
 
-	<!-- Collect the nav links, forms, and other content for toggling -->
+	<!-- the navbar links -->
 	<div
 		class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<!-- Home -->
-				<li class="active"><a href="javascript:void(0);"
+				<li class="active"><a href="index.html"
 					class="dropdown-toggle" data-toggle="dropdown"> 首页 </a></li>
 				<!-- End Home -->
 
@@ -45,23 +45,17 @@
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>书法教材</h3></li>
-
-												<li><a href="#"><i class="fa fa-sort-alpha-asc"></i>
-														作者团队</a></li>
+												<li><a href="#"><i class="fa fa-sort-alpha-asc"></i> 作者团队</a></li>
 												<li><a href="#"><i class="fa fa-magic"></i> 教材视频</a></li>
-												<li><a href="#"><i class="fa fa-ellipsis-h"></i>
-														使用学校</a></li>
-
+												<li><a href="#"><i class="fa fa-ellipsis-h"></i> 使用学校</a></li>
 											</ul>
 										</div>
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>视频教学</h3></li>
-
 												<!-- 楷书 -->
 												<li><a href="#"><i class="fa fa-bars"></i> 楷书视频</a></li>
 												<!-- End 楷书 -->
-
 												<!-- Icons -->
 												<li><a href="#"><i
 														class="fa fa-chevron-circle-right"></i> 欧阳询《九成宫》90集</a></li>
@@ -77,39 +71,29 @@
 												<!-- End Icons -->
 												<!-- 直播时间 
                                                                                                                                                              <li><a href="#"><i class="fa fa-bars"></i> 直播时间</a></li>
-                                                    <!-- End 直播时间 -->
-
-
+                                                <!-- End 直播时间 -->
 
 											</ul>
 										</div>
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>十六宫格书画临摹</h3></li>
-
 												<!-- 十六宫格书画临摹 -->
-												<li><a href="#l"><i class="fa fa-list-ol"></i>
-														书法临摹方法</a></li>
+												<li><a href="#"><i class="fa fa-list-ol"></i> 书法临摹方法</a></li>
 												<li><a href="#"><i class="fa fa-image"></i> 绘画临摹方法</a></li>
-												<li><a href="#"><i class="fa fa-dot-circle-o"></i>
-														整碑临摹方法</a></li>
-												<li><a href="#"><i class="fa fa-dot-circle-o"></i>
-														整画临摹方法</a></li>
+												<li><a href="#"><i class="fa fa-dot-circle-o"></i> 整碑临摹方法</a></li>
+												<li><a href="#"><i class="fa fa-dot-circle-o"></i> 整画临摹方法</a></li>
 												<!-- End 十六宫格书画临摹 -->
 											</ul>
 										</div>
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>书画学校</h3></li>
-
 												<!-- campus -->
-												<li><a href="#"><i class="fa fa-map-marker"></i>
-														学校地图</a></li>
+												<li><a href="#"><i class="fa fa-map-marker"></i> 学校地图</a></li>
 												<li><a href="#"><i class="fa fa-bars"></i> 师资团队</a></li>
 												<li><a href="#"><i class="fa fa-bars"></i> 学员作品</a></li>
-
 												<!-- End campus -->
-
 											</ul>
 										</div>
 									</div>
@@ -124,45 +108,20 @@
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 书画赏析 </a>
 					<ul class="dropdown-menu">
-
 						<li class="dropdown-submenu"><a href="javascript:void(0);">书法碑帖</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">历代名碑 </a></li>
 								<li><a href="#">历代名帖 </a></li>
-							</ul></li>
-
+							</ul>
+						</li>
 						<li class="dropdown-submenu"><a href="javascript:void(0);">书画</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">历代中外名画</a></li>
 								<li><a href="#">当代书画</a></li>
-							</ul></li>
-
-						<!-- Sub Level Menu 
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Sub Level 1</a>
-                                <ul class="dropdown-menu no-bottom-space">
-                                    <li><a href="#">Sub Level 2</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a href="javascript:void(0);">Sub Level 2</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Sub Level 3</a></li>
-                                            <li><a href="#">Sub Level 3</a></li>
-                                            <li><a href="#">Sub Level 3</a></li>
-                                        </ul>                                
-                                    </li>
-                                    <li><a href="#">Sub Level 2</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a href="javascript:void(0);">Sub Level 2</a>
-                                        <ul class="dropdown-menu no-bottom-space">
-                                            <li><a href="#">Sub Level 3</a></li>
-                                            <li><a href="#">Sub Level 3</a></li>
-                                            <li><a href="#">Sub Level 3</a></li>
-                                        </ul>                                
-                                    </li>
-                                </ul>                                
-                            </li>                            
-                            <!-- End Sub Level Menu -->
-					</ul></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 				<!-- End Appreciation Pages -->
 
 				<!-- Mall Pages-->
@@ -185,6 +144,7 @@
 						<li><a href="news.html#report">新闻报道</a></li>
 					</ul></li>
 				<!-- End News Pages-->
+				
 				<!-- About Pages -->
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 关于我们 </a>
@@ -195,7 +155,7 @@
 					</ul></li>
 				<!-- End About Pages -->
 
-				<!-- Search Block -->
+				<!-- Search Block 
 				<li><i class="search fa fa-search search-btn"></i>
 					<div class="search-open">
 						<div class="input-group animated fadeInDown">

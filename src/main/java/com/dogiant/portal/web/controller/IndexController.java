@@ -4,14 +4,21 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.dogiant.portal.service.DataIntegrationService;
 
 @Controller
 public class IndexController {
 	
 	protected final Log logger = LogFactory.getLog(getClass());
+	
+	@Autowired
+	private DataIntegrationService dataIntegrationService;
 	
 	@RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public String index(Map<String, Object> model) {
@@ -26,6 +33,15 @@ public class IndexController {
 		// 文章Id获取文章内容   文章栏目获取面包屑栏目列表  
 		
 		model.put("title", "首页");
+        return "index";
+    }
+	
+	@RequestMapping(value = "/{catCode}/", method = RequestMethod.GET)
+    public String catgory(Map<String, Object> model,@PathVariable("catCode") String catCode) {
+		logger.info(catCode);
+		//获取栏目 ，判断栏目是否正文栏目
+		
+		model.put("title", "catName");
         return "index";
     }
 

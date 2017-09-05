@@ -7,7 +7,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                       <img id="logo-footer" src="assets/img/qrcode_for_gh_50abe7c69081_430.jpg" alt="" width="226">  
+                       <img id="logo-footer" src="/assets/img/qrcode_for_gh_50abe7c69081_430.jpg" alt="" width="226">  
                     </div><!--/col-md-3-->
                     <!-- End About -->
 

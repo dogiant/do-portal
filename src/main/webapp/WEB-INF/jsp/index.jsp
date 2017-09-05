@@ -14,7 +14,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <!--
      Web Fonts 
@@ -22,26 +22,26 @@
 	-->
 	
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-default.css">
-    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+    <link rel="stylesheet" href="/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="/assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/plugins/animate.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/parallax-slider/css/parallax-slider.css">
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 
     <!-- CSS Theme -->
-    <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
-    <link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+    <link rel="stylesheet" href="/assets/css/theme-colors/default.css" id="style_color">
+    <link rel="stylesheet" href="/assets/css/theme-skins/dark.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>	
 
 <body>
@@ -58,13 +58,13 @@
             <div class="da-slide">
                 <h2><i>《书法练习指导》</i> <br /> <i>全套书法教材</i> <br />  </h2>
                 <p><i>《中小学书法教育指导纲要》</i> <br /> <i>权威教育部门推荐使用</i> <br /> <i>吉林美术出版社出版</i></p>
-                <div class="da-img"><img class="img-responsive" src="assets/plugins/parallax-slider/img/shufajiaocai.png" alt=""></div>
+                <div class="da-img"><img class="img-responsive" src="/assets/plugins/parallax-slider/img/shufajiaocai.png" alt=""></div>
             </div>
 
             <div class="da-slide">
                 <h2><i>传承经典</i> <br /> <i>弘扬中华优秀传统文化</i> <br /> </h2>
                 <p><i>国学启蒙读本</i> <br /> <i>中国国学基础读本</i><br /> <i>现代教育出版社出版</i></p>
-                <div class="da-img"><img src="assets/plugins/parallax-slider/img/guoxueandguoxue.png" alt="image01" /></div>
+                <div class="da-img"><img src="/assets/plugins/parallax-slider/img/guoxueandguoxue.png" alt="image01" /></div>
             </div>
             
 			<div class="da-slide">
@@ -108,7 +108,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 	<div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/screenshot/2017-07-02_16_1.png" alt="">
+                            <img class="img-responsive" src="/assets/img/screenshot/2017-07-02_16_1.png" alt="">
                         </div>
                         <a class="btn-more hover-effect" href="index.html#">观看视频 +</a>					
                     </div>
@@ -122,7 +122,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/screenshot/2017-07-02_16_2.png" alt="">
+                            <img class="img-responsive" src="/assets/img/screenshot/2017-07-02_16_2.png" alt="">
                         </div>
                         <a class="btn-more hover-effect" href="article.html">观看视频 +</a>                   
                     </div>
@@ -136,7 +136,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/screenshot/2017-07-02_16_3.png" alt="">
+                            <img class="img-responsive" src="/assets/img/screenshot/2017-07-02_16_3.png" alt="">
                         </div>
                         <a class="btn-more hover-effect" href="index.html#">观看视频 +</a>                   
                     </div>
@@ -150,7 +150,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/screenshot/2017-07-02_16_4.png" alt="">
+                            <img class="img-responsive" src="/assets/img/screenshot/2017-07-02_16_4.png" alt="">
                         </div>
                         <a class="btn-more hover-effect" href="index.html#">观看视频 +</a>                   
                     </div>
@@ -179,7 +179,7 @@
 
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
+                                    <img src="/assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
                                 </div>
                                 <div class="col-md-8">
                                     <h4>诗书画印重识启功</h4>
@@ -226,19 +226,19 @@
     			<div id="myCarousel" class="carousel slide carousel-v1">
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="assets/img/works/img1.jpg" alt="">
+                            <img src="/assets/img/works/img1.jpg" alt="">
                             <div class="carousel-caption">
 
                             </div>
                         </div>
                         <div class="item">
-                            <img src="assets/img/works/img2.jpg" alt="">
+                            <img src="/assets/img/works/img2.jpg" alt="">
                             <div class="carousel-caption">
 
                             </div>
                             </div>
                         <div class="item">
-                            <img src="assets/img/works/img3.jpg" alt="">
+                            <img src="/assets/img/works/img3.jpg" alt="">
                             <div class="carousel-caption">
 
                             </div>
@@ -262,13 +262,13 @@
         <div class="headline"><h2>合作伙伴</h2></div>        
         <div class="owl-clients-v1">
             <div class="item">
-                <img src="assets/img/partner/partner3.png" alt="">
+                <img src="/assets/img/partner/partner3.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/partner/partner1.png" alt="">
+                <img src="/assets/img/partner/partner1.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/partner/partner2.png" alt="">
+                <img src="/assets/img/partner/partner2.png" alt="">
             </div>
         </div>
         <!-- End Owl Clients v1 -->
@@ -281,22 +281,22 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->			
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
-<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="/assets/js/custom.js"></script>
 <!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
-<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
-<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/style-switcher.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/parallax-slider.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
@@ -306,9 +306,9 @@
     });
 </script>
 <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/html5shiv.js"></script>
+    <script src="/assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>
