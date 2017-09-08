@@ -14,7 +14,7 @@ public class DataIntegrationServiceImpl implements DataIntegrationService {
 
 	@Override
 	public String hello() {
-		return cmsDataService.getSectionDataByCode("aa");
+		return cmsDataService.hello("hi");
 	}
 
 }
