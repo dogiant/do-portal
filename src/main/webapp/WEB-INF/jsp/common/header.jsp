@@ -45,8 +45,8 @@
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>书法教材</h3></li>
-												<li><a href="/uthor-team/"><i class="fa fa-sort-alpha-asc"></i> 作者团队</a></li>
-												<li><a href="/video/"><i class="fa fa-magic"></i> 教材视频</a></li>
+												<li><a href="/author-team/"><i class="fa fa-sort-alpha-asc"></i> 作者团队</a></li>
+												<li><a href="/teaching-video/"><i class="fa fa-magic"></i> 教材视频</a></li>
 												<li><a href="/school/"><i class="fa fa-ellipsis-h"></i> 使用学校</a></li>
 											</ul>
 										</div>
@@ -63,7 +63,7 @@
 														class="fa fa-chevron-circle-right"></i> 颜真卿《颜勤礼碑》90集</a></li>
 												<li><a href="/duobaotabei/"><i
 														class="fa fa-chevron-circle-right"></i> 颜真卿《多宝塔碑》90集</a></li>
-												<li><a href="xuanmitabei"><i
+												<li><a href="/xuanmitabei/"><i
 														class="fa fa-chevron-circle-right"></i> 柳公权《玄密塔碑》90集</a></li>
 												<li><a href="/sanmenji/"><i
 														class="fa fa-chevron-circle-right"></i> 赵孟頫《三门记》90集</a></li>
