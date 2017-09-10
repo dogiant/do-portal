@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.dogiant.api.dto.ArticleCatDTO;
 import com.dogiant.api.dto.ArticleItemDTO;
@@ -94,9 +96,9 @@ public class ViewController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/{catCode}/", method = RequestMethod.GET)
+	@RequestMapping(value = "/video/{catCode}/", method = RequestMethod.GET)
 	public String category(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
-			@PathVariable("catCode") String catCode) {
+			@PathVariable("catCode") String catCode , @RequestParam(value="pageNo",required = false) String pageNo) {
 		logger.info("catCode==" + catCode);
 		
 		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
@@ -124,7 +126,11 @@ public class ViewController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		model.put("crumbs", articleCatList);
+		if(articleCatList!=null && articleCatList.size()>0) {
+			model.put("crumbs", articleCatList.get(0));
+		}else {
+			model.put("crumbs", "");
+		}
 
 		// 判断栏目是否正文栏目
 		if (articleCat.getIsTextCat()) {
@@ -138,17 +144,22 @@ public class ViewController {
 			return "text-page";
 		}
 		// 分页列表
-		Integer pageNo = request.getParameter("pageNo") == null ? 1 : Integer.parseInt(request.getParameter("pageNo"));
-		Integer pageRows = request.getParameter("pageRows") == null ? 10
+		if(StringUtils.isBlank(pageNo)) {
+			pageNo = "1";
+		}else if(Integer.parseInt(pageNo)<1) {
+			pageNo = "1";
+		}
+//		Integer pageNo = request.getParameter("pageNo") == null ? 1 : Integer.parseInt(request.getParameter("pageNo"));
+		Integer pageRows = request.getParameter("pageRows") == null ? 12
 				: Integer.parseInt(request.getParameter("pageRows"));
 		PagedResult<ArticleItemDTO> pagedResult = null;
 		try {
-			pagedResult = dataIntegrationService.getArticleItemsByCatCode(catCode, pageNo, pageRows);
+			pagedResult = dataIntegrationService.getArticleItemsByCatCode(catCode, Integer.parseInt(pageNo), pageRows);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		model.put("pagedResult", pagedResult);
-		return "list-page";
+		return "list-page-video";
 	}
 
 	@RequestMapping(value = "/article/{id}.html", method = RequestMethod.GET)

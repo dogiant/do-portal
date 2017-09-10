@@ -54,18 +54,18 @@
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>视频教学</h3></li>
 												<!-- 楷书 -->
-												<li><a href="/regular/"><i class="fa fa-bars"></i> 楷书视频</a></li>
+												<li><a href="/video/regular/"><i class="fa fa-bars"></i> 楷书视频</a></li>
 												<!-- End 楷书 -->
 												<!-- Icons -->
-												<li><a href="/jiuchenggong/"><i
+												<li><a href="/video/jiuchenggong/"><i
 														class="fa fa-chevron-circle-right"></i> 欧阳询《九成宫》90集</a></li>
-												<li><a href="/yanqinglibei/"><i
+												<li><a href="/video/yanqinglibei/"><i
 														class="fa fa-chevron-circle-right"></i> 颜真卿《颜勤礼碑》90集</a></li>
-												<li><a href="/duobaotabei/"><i
+												<li><a href="/video/duobaotabei/"><i
 														class="fa fa-chevron-circle-right"></i> 颜真卿《多宝塔碑》90集</a></li>
-												<li><a href="/xuanmitabei/"><i
+												<li><a href="/video/xuanmitabei/"><i
 														class="fa fa-chevron-circle-right"></i> 柳公权《玄密塔碑》90集</a></li>
-												<li><a href="/sanmenji/"><i
+												<li><a href="/video/sanmenji/"><i
 														class="fa fa-chevron-circle-right"></i> 赵孟頫《三门记》90集</a></li>
 
 												<!-- End Icons -->
@@ -79,10 +79,10 @@
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>十六宫格书画临摹</h3></li>
 												<!-- 十六宫格书画临摹 -->
-												<li><a href="/calligraphy/"><i class="fa fa-list-ol"></i> 书法临摹方法</a></li>
-												<li><a href="/painting/"><i class="fa fa-image"></i> 绘画临摹方法</a></li>
-												<li><a href="/tablet/"><i class="fa fa-dot-circle-o"></i> 整碑临摹方法</a></li>
-												<li><a href="/picture/"><i class="fa fa-dot-circle-o"></i> 整画临摹方法</a></li>
+												<li><a href="/video/calligraphy/"><i class="fa fa-list-ol"></i> 书法临摹方法</a></li>
+												<li><a href="/video/painting/"><i class="fa fa-image"></i> 绘画临摹方法</a></li>
+												<li><a href="/video/tablet/"><i class="fa fa-dot-circle-o"></i> 整碑临摹方法</a></li>
+												<li><a href="/video/picture/"><i class="fa fa-dot-circle-o"></i> 整画临摹方法</a></li>
 												<!-- End 十六宫格书画临摹 -->
 											</ul>
 										</div>
