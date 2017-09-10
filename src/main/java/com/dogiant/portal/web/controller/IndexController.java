@@ -37,12 +37,22 @@ public class IndexController {
     }
 	
 	@RequestMapping(value = "/{catCode}/", method = RequestMethod.GET)
-    public String catgory(Map<String, Object> model,@PathVariable("catCode") String catCode) {
+    public String category(Map<String, Object> model,@PathVariable("catCode") String catCode) {
 		logger.info(catCode);
 		//获取栏目 ，判断栏目是否正文栏目
 		
-		model.put("title", "catName");
-        return "index";
+		model.put("title", "category");
+        return "list-page";
+    }
+	
+	
+	@RequestMapping(value = "/article/{id}", method = RequestMethod.GET)
+    public String text(Map<String, Object> model,@PathVariable("id") long id) {
+		logger.info(id);
+		//获取正文页
+		
+		model.put("title", "text");
+        return "text-page";
     }
 
 }

@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/plugins/parallax-slider/css/parallax-slider.css">
     <link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio-index.min.css">    
+    <link rel="stylesheet" href="/assets/plugins/cube-portfolio/cubeportfolio/custom/custom-index-cubeportfolio.css">
 
     <!-- CSS Theme -->
     <link rel="stylesheet" href="/assets/css/theme-colors/default.css" id="style_color">
@@ -167,55 +169,51 @@
     	<div class="row margin-bottom-30">
         	<!-- Welcome Block -->
     		<div class="col-md-8 md-margin-bottom-40">
-                <div class="headline"><h2>新闻中心</h2></div>  
-				  <div class="tab-v1">
-                    <ul class="nav nav-tabs">
-                   	  <li class="active"><a data-toggle="tab" href="news.html#report">新闻报道</a></li>
-                        <li><a data-toggle="tab" href="news.html#activity">活动资讯</a></li>
-                        <li><a data-toggle="tab" href="news.html#notice">网站公告</a></li>
-                    </ul>                
-                    <div class="tab-content">
-                        <div id="report" class="tab-pane fade in  active">
+                <div class="headline"><h2>新闻中心</h2></div> 
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="/assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
-                                </div>
-                                <div class="col-md-8">
-                                    <h4>诗书画印重识启功</h4>
-                                    <p>　　今年的7月26日，是启功先生百年诞辰，由北京师范大学主办的“启功遗墨——启功先生书画作品展览”同日于国家博物馆开幕。同时，《启功全集》也于26日举行了首发式。本次北师大将活动定义为重新认识启功，意欲展示诗书画印全才的多面启功。</p>                        
-                                </div>
-                            </div>
+                <div id="filters-container" class="cbp-l-filters-text content-xs">
+                    <div data-filter=".report" class="cbp-filter-item-active cbp-filter-item" id="news_init"> 新闻报道 </div> |
+                    <div data-filter=".activity" class="cbp-filter-item"> 活动资讯 </div> |
+                    <div data-filter=".notice" class="cbp-filter-item"> 网站公告 </div> 
+                </div>
+
+                <div id="grid-container" >
+                	<div class="cbp-item report">
+                    	<div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
                         </div>
-                        
-                        <div id="activity" class="tab-pane fade in ">
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>第六届中国书坛新人作品展览征稿启事</h4>
-                                    <p>　　为贯彻落实党的十七大精神，推动书法艺术大发展大繁荣，适应书法新人发展的需要，经申办和协商，中国书法家协会决定举办第六届中国书坛新人作品展览。</p>                        
-                                </div>
-                            </div>
+                        <div class="col-md-8">
+                            <h4>诗书画印重识启功</h4>
+                            <p>　　今年的7月26日，是启功先生百年诞辰，由北京师范大学主办的“启功遗墨——启功先生书画作品展览”同日于国家博物馆开幕。同时，《启功全集》也于26日举行了首发式。本次北师大将活动定义为重新认识启功，意欲展示诗书画印全才的多面启功。</p>                        
                         </div>
-
-                        
-                        <div id="notice" class="tab-pane fade in">
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>飞龙十六宫格网站升级公告</h4>
-                                    
-                                    <p>　　本网自开通以来，受到了广大学生、书法爱好者的广泛关注。即日起，网站将更加及时的发布信息、让更加丰富的内容呈现给大家。 </p>
-                                    <p>　　升级后的网站，在活动资讯栏目中，我们将为您呈现业界重大活动。在新闻报道栏目中，我们将及时报道动态书法信息，反映当代书坛。</p>                        
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
                     </div>
-			 	</div>
+                  </div>
+                  
+                  
+				 <div class="cbp-item activity">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>第六届中国书坛新人作品展览征稿启事</h4>
+                            <p>　　为贯彻落实党的十七大精神，推动书法艺术大发展大繁荣，适应书法新人发展的需要，经申办和协商，中国书法家协会决定举办第六届中国书坛新人作品展览。</p>                        
+                        </div>
+                    </div>
+                 </div>
+
+                        
+                 <div class="cbp-item notice">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>飞龙十六宫格网站升级公告</h4>
+                            <p>　　本网自开通以来，受到了广大学生、书法爱好者的广泛关注。即日起，网站将更加及时的发布信息、让更加丰富的内容呈现给大家。 </p>
+                            <p>　　升级后的网站，在活动资讯栏目中，我们将为您呈现业界重大活动。在新闻报道栏目中，我们将及时报道动态书法信息，反映当代书坛。</p>                        
+                        </div>
+                    </div>
+                 </div>  
+                  
+              </div>  
 						
             </div>
             <!--/col-md-8-->        
@@ -290,10 +288,12 @@
 <script type="text/javascript" src="/assets/plugins/parallax-slider/js/modernizr.js"></script>
 <script type="text/javascript" src="/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
 <script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 <!-- JS Customization -->
 <script type="text/javascript" src="/assets/js/custom.js"></script>
 <!-- JS Page Level -->           
 <script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/cube-portfolio/cube-portfolio-index.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/style-switcher.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/parallax-slider.js"></script>
