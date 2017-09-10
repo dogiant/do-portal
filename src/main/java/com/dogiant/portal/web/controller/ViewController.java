@@ -43,21 +43,37 @@ public class ViewController {
 			@PathVariable("catCode") String catCode) {
 		logger.info("catCode==" + catCode);
 		// 获取栏目
-		ArticleCatDTO articleCat = dataIntegrationService.getArticleCatByCode(catCode);
+		ArticleCatDTO articleCat = null;
+		try {
+			articleCat = dataIntegrationService.getArticleCatByCode(catCode);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 		if (articleCat == null) {
 			try {
 				response.sendRedirect("/404.html");
+				return null;
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 		// 获取面包屑导航
-		List<ArticleCatDTO> articleCatList = dataIntegrationService.getCrumbsArticleCats(articleCat.getCatCode());
+		List<ArticleCatDTO> articleCatList = null;
+		try {
+			articleCatList = dataIntegrationService.getCrumbsArticleCats(articleCat.getCatCode());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		model.put("crumbs", articleCatList);
 
 		// 判断栏目是否正文栏目
 		if (articleCat.getIsTextCat()) {
-			ArticleItemDTO articleItem = dataIntegrationService.getArticleItemByCatCode(catCode);
+			ArticleItemDTO articleItem = null;
+			try {
+				articleItem = dataIntegrationService.getArticleItemByCatCode(catCode);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			model.put("article", articleItem);
 			return "text-page";
 		}
@@ -65,8 +81,12 @@ public class ViewController {
 		Integer pageNo = request.getParameter("pageNo") == null ? 1 : Integer.parseInt(request.getParameter("pageNo"));
 		Integer pageRows = request.getParameter("pageRows") == null ? 10
 				: Integer.parseInt(request.getParameter("pageRows"));
-		PagedResult<ArticleItemDTO> pagedResult = dataIntegrationService.getArticleItemsByCatCode(catCode, pageNo,
-				pageRows);
+		PagedResult<ArticleItemDTO> pagedResult = null;
+		try {
+			pagedResult = dataIntegrationService.getArticleItemsByCatCode(catCode, pageNo, pageRows);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		model.put("pagedResult", pagedResult);
 		return "list-page";
 	}
@@ -77,10 +97,16 @@ public class ViewController {
 		logger.info("param,id==" + id);
 		// 获取正文页
 
-		ArticleItemDTO articleItem = dataIntegrationService.getArticleItemById(id);
+		ArticleItemDTO articleItem = null;
+		try {
+			articleItem = dataIntegrationService.getArticleItemById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		if (articleItem == null) {
 			try {
 				response.sendRedirect("/404.html");
+				return null;
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -88,7 +114,12 @@ public class ViewController {
 
 		ArticleCatDTO articleCat = articleItem.getArticleCatDTO();
 		if (articleCat != null) {
-			List<ArticleCatDTO> articleCatList = dataIntegrationService.getCrumbsArticleCats(articleCat.getCatCode());
+			List<ArticleCatDTO> articleCatList = null;
+			try {
+				articleCatList = dataIntegrationService.getCrumbsArticleCats(articleCat.getCatCode());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			model.put("crumbs", articleCatList);
 		}
 
