@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.dogiant.api.dto.ArticleItemDTO;
 import com.dogiant.portal.service.DataIntegrationService;
 
 @Controller
@@ -48,9 +49,14 @@ public class IndexController {
 	
 	@RequestMapping(value = "/article/{id}", method = RequestMethod.GET)
     public String text(Map<String, Object> model,@PathVariable("id") long id) {
-		logger.info(id);
+		logger.info("param,id==" + id);
 		//获取正文页
 		
+		ArticleItemDTO dto = dataIntegrationService.getArticleItemById(id);
+		if (dto == null) {
+			
+		}
+		model.put("article", dto);
 		model.put("title", "text");
         return "text-page";
     }
