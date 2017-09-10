@@ -44,47 +44,51 @@ public class ViewController {
 //		key_navigation
 //		contact_us
 		
-		SectionDTO slider_1 = dataIntegrationService.getSectionByCode("slider_1");
-		SectionDTO slider_2 = dataIntegrationService.getSectionByCode("slider_2");
-		SectionDTO slider_3 = dataIntegrationService.getSectionByCode("slider_3");
-		
-		SectionDTO brief_intro = dataIntegrationService.getSectionByCode("brief_intro");
-		
-		SectionDTO video_tutorials_1 = dataIntegrationService.getSectionByCode("video_tutorials_1");
-		SectionDTO video_tutorials_2 = dataIntegrationService.getSectionByCode("video_tutorials_2");
-		SectionDTO video_tutorials_3 = dataIntegrationService.getSectionByCode("video_tutorials_3");
-		SectionDTO video_tutorials_4 = dataIntegrationService.getSectionByCode("video_tutorials_4");
-		
-		SectionDTO news_report = dataIntegrationService.getSectionByCode("news_report");
-		SectionDTO news_activity = dataIntegrationService.getSectionByCode("news_activity");
-		SectionDTO news_notice = dataIntegrationService.getSectionByCode("news_notice");
-		
-		SectionDTO appreciation = dataIntegrationService.getSectionByCode("appreciation");
-		SectionDTO cooperative_partner = dataIntegrationService.getSectionByCode("cooperative_partner");
-		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
-		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
-		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
-		
-		model.put("slider_1", slider_1);
-		model.put("slider_2", slider_2);
-		model.put("slider_3", slider_3);
-		model.put("brief_intro", brief_intro);
-		model.put("video_tutorials_1", video_tutorials_1);
-		model.put("video_tutorials_2", video_tutorials_2);
-		model.put("video_tutorials_3", video_tutorials_3);
-		model.put("video_tutorials_4", video_tutorials_4);
-		model.put("news_report", news_report);
-		model.put("news_activity", news_activity);
-		model.put("news_notice", news_notice);
-		model.put("appreciation", appreciation);
-		model.put("cooperative_partner", cooperative_partner);
-		model.put("qr_code", qr_code);
-		model.put("key_navigation", key_navigation);
-		model.put("contact_us", contact_us);
-		//暂时先动态获取，后续考虑静态化处理
-		
-		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
-		model.put("latestPost", latestPost);
+		try {
+			SectionDTO slider_1 = dataIntegrationService.getSectionByCode("slider_1");
+			SectionDTO slider_2 = dataIntegrationService.getSectionByCode("slider_2");
+			SectionDTO slider_3 = dataIntegrationService.getSectionByCode("slider_3");
+			
+			SectionDTO brief_intro = dataIntegrationService.getSectionByCode("brief_intro");
+			
+			SectionDTO video_tutorials_1 = dataIntegrationService.getSectionByCode("video_tutorials_1");
+			SectionDTO video_tutorials_2 = dataIntegrationService.getSectionByCode("video_tutorials_2");
+			SectionDTO video_tutorials_3 = dataIntegrationService.getSectionByCode("video_tutorials_3");
+			SectionDTO video_tutorials_4 = dataIntegrationService.getSectionByCode("video_tutorials_4");
+			
+			SectionDTO news_report = dataIntegrationService.getSectionByCode("news_report");
+			SectionDTO news_activity = dataIntegrationService.getSectionByCode("news_activity");
+			SectionDTO news_notice = dataIntegrationService.getSectionByCode("news_notice");
+			
+			SectionDTO appreciation = dataIntegrationService.getSectionByCode("appreciation");
+			SectionDTO cooperative_partner = dataIntegrationService.getSectionByCode("cooperative_partner");
+			SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+			SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+			SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+			
+			model.put("slider_1", slider_1);
+			model.put("slider_2", slider_2);
+			model.put("slider_3", slider_3);
+			model.put("brief_intro", brief_intro);
+			model.put("video_tutorials_1", video_tutorials_1);
+			model.put("video_tutorials_2", video_tutorials_2);
+			model.put("video_tutorials_3", video_tutorials_3);
+			model.put("video_tutorials_4", video_tutorials_4);
+			model.put("news_report", news_report);
+			model.put("news_activity", news_activity);
+			model.put("news_notice", news_notice);
+			model.put("appreciation", appreciation);
+			model.put("cooperative_partner", cooperative_partner);
+			model.put("qr_code", qr_code);
+			model.put("key_navigation", key_navigation);
+			model.put("contact_us", contact_us);
+			//暂时先动态获取，后续考虑静态化处理
+			
+			List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
+			model.put("latestPost", latestPost);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		model.put("title", "首页");
 		return "index";
@@ -180,9 +184,11 @@ public class ViewController {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			System.out.println(articleCatList.size());
 			model.put("crumbs", articleCatList);
 		}
-
+		model.put("articleCat", articleCat);
+		logger.info(articleItem);
 		model.put("article", articleItem);
 		return "text-page";
 	}

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -53,11 +55,14 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">新闻中心</h1>
+            <h1 class="pull-left">${article.articleCatDTO.catName}</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="news.html#report">新闻中心</a></li>
-                <li class="active"><a href="news.html#notice">网站公告</a></li>
+           
+                <li><a href="/index.html">首页</a></li>
+                <c:forEach items="${crumbs}" var="articleCat" varStatus="stat">
+                	<li <c:if test="${stat.last}"> class="active"</c:if> ><a href="/${articleCat.catCode }/">${articleCat.catName }</a></li>
+                </c:forEach>
+    
             </ul>
         </div>
     </div>
@@ -68,25 +73,28 @@
 		<div class="row">
 			<div class="col-md-9">
 				<div class="blog-grid margin-bottom-30">
-					<h2 class="blog-grid-title-lg">十六宫格简介</h2>
+					<h2 class="blog-grid-title-lg">${article.title }</h2>
 					<div class="overflow-h margin-bottom-10">
 						<ul class="blog-grid-info pull-left">
-							<li>宋一夫</li>
-							<li>2017-07-12</li>
+							<li>${article.author }</li>
+							<li><fmt:formatDate type="both" pattern="yyyy-MM-dd HH:mm"  value="${article.ctime }" /></li>
 						</ul>
 						<div class="pull-right">
 							<div class="addthis_sharing_toolbox"></div>
 						</div>
 					</div>
-                    <!--
-					<img class="img-responsive" src="/assets/img/news/news2.jpg" alt="">
-                    -->
+					<c:if test="${article.coverIntoContent }">
+						<img class="img-responsive" src="${article.coverPicUrl }" alt="">
+					</c:if>
 				</div>
+				<div>
+					${article.content }
+				</div>
+				<!--  
                <div id="video-container" class="blog-grid margin-bottom-30">
                
                </div>
-
-				<p> “十六宫格”是在“田字格”“米字格”“九宫格”的基础上，创新的一种新型书写用格。使用“十六宫格”的长处，它将方块字进行最佳等距的分割，使书写者能在格中找到笔画及结构的准确位置，会对初学书法者起到事半功倍的效果。凡用过“十六宫格”的书写者，均认同“十六宫格”在书法学习中不可替代的作用。</p>
+               -->
 			</div>
 
 
