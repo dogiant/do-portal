@@ -60,7 +60,17 @@
            
                 <li><a href="/index.html">首页</a></li>
                 <c:forEach items="${crumbs}" var="articleCat" varStatus="stat">
-                	<li <c:if test="${stat.last}"> class="active"</c:if> ><a href="/${articleCat.catCode }/">${articleCat.catName }</a></li>
+                
+                <c:choose> 
+				   <c:when test="${stat.last}">
+						<li class="active"><a href="/${articleCat.catCode }/">${articleCat.catName }</a></li>
+				   </c:when>  
+				     
+				   <c:otherwise>
+				   		<li><a href="javascript:void(0)">${articleCat.catName }</a></li>
+				   </c:otherwise>  
+				</c:choose>
+                	
                 </c:forEach>
     
             </ul>

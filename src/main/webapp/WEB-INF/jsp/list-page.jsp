@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -33,7 +35,7 @@
     <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/plugins/parallax-slider/css/parallax-slider.css">
     <link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-
+    <link rel="stylesheet" href="/assets/css/pages/jPaginate-style.css" />
     <!-- CSS Theme -->
     <link rel="stylesheet" href="/assets/css/theme-colors/default.css" id="style_color">
     <link rel="stylesheet" href="/assets/css/theme-skins/dark.css">
@@ -49,14 +51,27 @@
 	<%@ include file="common/header.jsp" %>
     <!--=== End Header ===-->
     
-    <!--=== Breadcrumbs ===-->
+      <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">新闻中心</h1>
+            <h1 class="pull-left">${articleCat.catName}</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="news.html#report">新闻中心</a></li>
-                <li class="active"><a href="news.html#notice">网站公告</a></li>
+           
+                <li><a href="/index.html">首页</a></li>
+                <c:forEach items="${crumbs}" var="articleCat" varStatus="stat">
+                
+	                <c:choose> 
+					   <c:when test="${stat.last}">
+							<li class="active"><a href="/${articleCat.catCode }/">${articleCat.catName }</a></li>
+					   </c:when>  
+					     
+					   <c:otherwise>
+					   		<li><a href="javascript:void(0)">${articleCat.catName }</a></li>
+					   </c:otherwise>  
+					</c:choose>
+                	
+                </c:forEach>
+    
             </ul>
         </div>
     </div>
@@ -70,6 +85,28 @@
             <div class="col-md-12 md-margin-bottom-50">
 
 				<!-- News Grid -->
+				<c:forEach items="${pagedResult.result}" var="article" varStatus="stat">
+					<div class="row margin-bottom-50 box">
+						<div class="col-sm-4 sm-margin-bottom-20">
+							<a href="/article/${article.id }.html"><img class="img-responsive" src="${article.coverPicUrl }" alt="${article.title }"></a>
+						</div>
+						<div class="col-sm-8">
+							<div class="blog-grid">
+								<h3><a href="/article/${article.id }.html">${article.title }</a></h3>
+								<ul class="blog-grid-info">
+									<li>${article.author }</li>
+									<li><fmt:formatDate type="both" pattern="yyyy-MM-dd HH:mm"  value="${article.ctime }" /></li>
+								</ul>
+								<p>
+								　　${article.digest }
+								</p>                  
+								<a class="r-more" href="/article/${article.id }.html">详细</a>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
+				
+				<!--  
 				<div class="row margin-bottom-50 box">
 					<div class="col-sm-4 sm-margin-bottom-20">
 						<img class="img-responsive" src="/assets/img/news/news1.jpg" alt="">
@@ -84,27 +121,24 @@
 							<p>　　今年的7月26日，是启功先生百年诞辰，由北京师范大学主办的“启功遗墨——启功先生书画作品展览”同日于国家博物馆开幕。同时，《启功全集》也于26日举行了首发式。本次北师大将活动定义为重新认识启功，意欲展示诗书画印全才的多面启功。</p>                  
 							<a class="r-more" href="#">详细</a>
 						</div>
-	
 					</div>
-
 				</div>
+				-->
+				
 				<!-- End News Grid -->
                 
-            
-                <!-- Pagination -->
-                <div class="text-center md-margin-bottom-30">
-                    <ul class="pagination">
-                        <li><a href="page_clients.html#">«</a></li>
-                        <li><a href="page_clients.html#">1</a></li>
-                        <li><a href="page_clients.html#">2</a></li>
-                        <li class="active"><a href="page_clients.html#">3</a></li>
-                        <li><a href="page_clients.html#">4</a></li>
-                        <li><a href="page_clients.html#">5</a></li>
-                        <li><a href="page_clients.html#">»</a></li>
-                    </ul>                                                            
+                <div class="row">
+                	<div class="col-md-4">
+                	</div>
+                	<div class="col-md-8">
+                	    <!-- Pagination -->
+		                <div class="text-center md-margin-bottom-30">
+		                    <ul id="pagination">
+		                    </ul>                                                            
+		                </div>
+		                <!-- End Pagination -->
+                	</div>
                 </div>
-                <!-- End Pagination -->
-				
 			</div>
 			
             <!-- End Content -->
@@ -134,12 +168,32 @@
 <script type="text/javascript" src="/assets/js/plugins/fancy-box.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/style-switcher.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/revolution-slider.js"></script>
+<script type="text/javascript" src="/assets/js/pages/jquery.paginate.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
 		FancyBox.initFancybox();
 		StyleSwitcher.initStyleSwitcher();        
 		RevolutionSlider.initRSfullWidth();
+		
+		$("#pagination").paginate({
+			count 		: ${pagedResult.allRows},
+			start 		: ${pagedResult.pageNo},
+			display     : 10,
+			border					: true,
+			border_color			: '#BEF8B8',
+			text_color  			: '#68BA64',
+			background_color    	: '#E3F2E1',	
+			border_hover_color		: '#68BA64',
+			text_hover_color  		: 'black',
+			background_hover_color	: '#CAE6C6', 
+			rotate      : false,
+			images		: false,
+			mouse		: 'press',
+			onChange    : function(page){
+				location.href="/${articleCat.catCode }/?pageNo="+page;
+			 }
+		});
 
     });
 </script>
