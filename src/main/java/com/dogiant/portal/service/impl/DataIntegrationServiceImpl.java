@@ -58,4 +58,9 @@ public class DataIntegrationServiceImpl implements DataIntegrationService {
 		return cmsDataService.getArticleItemById(id);
 	}
 	
+	@Override
+	public List<ArticleItemDTO> getRecommendItem(int size){
+		return cmsDataService.getRecommendItem(size);
+	}
+	
 }

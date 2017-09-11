@@ -49,6 +49,7 @@
 
 <!-- CSS Customization -->
 <link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/pages/jPaginate-style.css" />
 </head>
 
 <body>
@@ -60,14 +61,28 @@
 
 		<!--=== Breadcrumbs ===-->
 		<div class="breadcrumbs">
-			<div class="container">
-				<h1 class="pull-left">${crumbs.catName }</h1>
-				<ul class="pull-right breadcrumb">
-					<li><a href="/index.html">首页</a></li>
-					<li><a href="news.html#report">${crumbs.catName }</a></li>
-				</ul>
-			</div>
-		</div>
+        <div class="container">
+            <h1 class="pull-left">${article.articleCatDTO.catName}</h1>
+            <ul class="pull-right breadcrumb">
+           
+                <li><a href="/index.html">首页</a></li>
+                <c:forEach items="${crumbs}" var="articleCat" varStatus="stat">
+                
+                <c:choose> 
+				   <c:when test="${stat.last}">
+						<li class="active"><a href="/${articleCat.catCode }/">${articleCat.catName }</a></li>
+				   </c:when>  
+				     
+				   <c:otherwise>
+				   		<li><a href="javascript:void(0)">${articleCat.catName }</a></li>
+				   </c:otherwise>  
+				</c:choose>
+                	
+                </c:forEach>
+    
+            </ul>
+        </div>
+    </div>
 		<!--=== End Breadcrumbs ===-->
 
 		<!--=== Content Part ===-->
@@ -86,11 +101,11 @@
 										<div class="overflow-hidden">
 											<img class="img-responsive" src="${obj.coverPicUrl}" alt="">
 										</div>
-										<a class="btn-more hover-effect" href="index.html#">观看视频 +</a>
+										<a class="btn-more hover-effect" href="/article/${obj.id}.html">观看视频 +</a>
 									</div>
 									<div class="caption">
 										<h3>
-											<a class="hover-effect" href="index.html#">${obj.title}</a>
+											<a class="hover-effect" href="/article/${obj.id}.html">${obj.title}</a>
 										</h3>
 										<p>${obj.content}</p>
 									</div>
@@ -103,36 +118,10 @@
 
 
 					<!-- Pagination -->
-					<div class="text-center md-margin-bottom-30">
-						<ul class="pagination">
-							<c:set var="page" value="${pagedResult.pageNo}" />
-							<c:set var="allPage" value="${pagedResult.allPage}" />
-							<c:if test="${page==1 }">
-							<li><a href="/video/${crumbs.catCode }/?pageNo=${page}">«</a></li>
-							</c:if>
-							<c:if test="${page>1 }">
-							<li><a href="/video/${crumbs.catCode }/?pageNo=${page-1}">«</a></li>
-							</c:if>
-							
-							<c:forEach var="i" begin="1" end="${pagedResult.allPage}"
-								step="1">
-								<c:if test="${page == i}">
-									<li class="active"><a href="/video/${crumbs.catCode }/?pageNo=${i}">${i}</a></li>
-								</c:if>
-								<c:if test="${page != i}">
-									<li><a href="/video/${crumbs.catCode }/?pageNo=${i}">${i}</a></li>
-								</c:if>
-							</c:forEach>
-							
-							<c:if test="${page == allPage}">
-								<li><a href="/video/${crumbs.catCode }/?pageNo=${page}">»</a></li>
-							</c:if>
-							<c:if test="${page < allPage}">
-								<li><a href="/video/${crumbs.catCode }/?pageNo=${page+1}">»</a></li>
-							</c:if>
-
-						</ul>
-					</div>
+					  <div class="text-center md-margin-bottom-30">
+		                    <ul id="pagination">
+		                    </ul>                                                            
+		                </div>
 					<!-- End Pagination -->
 
 				</div>
@@ -174,13 +163,33 @@
 		src="/assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript"
 		src="/assets/js/plugins/revolution-slider.js"></script>
+	<script type="text/javascript" src="/assets/js/pages/jquery.paginate.js"></script>
+		
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
 			FancyBox.initFancybox();
 			StyleSwitcher.initStyleSwitcher();
 			RevolutionSlider.initRSfullWidth();
-
+			
+			$("#pagination").paginate({
+				count 		: ${pagedResult.allPage},
+				start 		: ${pagedResult.pageNo},
+				display     : 12,
+				border					: true,
+				border_color			: '#BEF8B8',
+				text_color  			: '#68BA64',
+				background_color    	: '#E3F2E1',	
+				border_hover_color		: '#68BA64',
+				text_hover_color  		: 'black',
+				background_hover_color	: '#CAE6C6', 
+				rotate      : false,
+				images		: false,
+				mouse		: 'press',
+				onChange    : function(page){
+					location.href="/${articleCat.catCode }/?pageNo="+page;
+				 }
+			});
 		});
 	</script>
 	<!--[if lt IE 9]>

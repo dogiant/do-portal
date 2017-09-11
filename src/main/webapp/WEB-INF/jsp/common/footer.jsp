@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
     <div class="footer-v1">
         <div class="footer">
@@ -16,18 +18,12 @@
                         <div class="posts">
                             <div class="headline"><h2>最新发布</h2></div>
                             <ul class="list-unstyled latest-list">
-                                <li>
-                                    <a href="index.html#">飞龙十六宫格书法作品展</a>
-                                    <small>2017年07月02日</small>
+					        <c:forEach items="${latestPost}" var="obj">
+					            <li>
+                                    <a href="/article/${obj.id}.html">${obj.title }</a>
+                                    <small><fmt:formatDate value="${obj.ctime }" pattern="yyyy-MM-dd"/></small>
                                 </li>
-                                <li>
-                                    <a href="index.html#">全国第四届青年书法大赛冲刺</a>
-                                    <small>2017年07月01日</small>
-                                </li>
-                                <li>
-                                    <a href="index.html#">国学塑人，书法添景</a>
-                                    <small>2017年06月30日</small>
-                                </li>
+                            </c:forEach>
                             </ul>
                         </div>
                     </div><!--/col-md-3-->  

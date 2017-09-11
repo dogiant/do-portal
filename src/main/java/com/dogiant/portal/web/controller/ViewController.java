@@ -88,6 +88,8 @@ public class ViewController {
 
 			List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
 			model.put("latestPost", latestPost);
+			List<ArticleItemDTO> recommendItem = dataIntegrationService.getRecommendItem(4);
+			model.put("recommendItem", recommendItem);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -127,7 +129,7 @@ public class ViewController {
 			e.printStackTrace();
 		}
 		if (articleCatList != null && articleCatList.size() > 0) {
-			model.put("crumbs", articleCatList.get(0));
+			model.put("crumbs", articleCatList);
 		} else {
 			model.put("crumbs", "");
 		}

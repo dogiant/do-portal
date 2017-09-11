@@ -29,7 +29,7 @@
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<!-- Home -->
-				<li class="active"><a href="/index.html"
+				<li class="active"><a href="index.html"
 					class="dropdown-toggle" data-toggle="dropdown"> 首页 </a></li>
 				<!-- End Home -->
 

@@ -24,4 +24,6 @@ public interface DataIntegrationService {
 	public PagedResult<ArticleItemDTO> getArticleItemsByCatCode(String code,Integer pageNo,Integer pageRows);
 
 	public ArticleItemDTO getArticleItemById(Long id);
+	
+	public List<ArticleItemDTO> getRecommendItem(int size);
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -106,6 +108,25 @@
     	<!-- Recent Works -->
         <div class="headline"><h2>视频教程</h2></div>
         <div class="row margin-bottom-20">
+			<c:forEach items="${recommendItem}" var="obj">
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                	<div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" width="249" height="142">
+                        </div>
+                        <a class="btn-more hover-effect" href="/article/${obj.id}.html">观看视频 +</a>					
+                    </div>
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="/article/${obj.id}.html">${obj.title }</a></h3>
+                        <p>${obj.content }</p>
+                    </div>
+                </div>
+            </div>
+            
+            </c:forEach>
+            <!-- 
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 	<div class="thumbnail-img">
@@ -163,6 +184,7 @@
                 </div>
             </div>
         </div>
+         -->
     	<!-- End Recent Works -->
 
     	<!-- Info Blokcs -->
