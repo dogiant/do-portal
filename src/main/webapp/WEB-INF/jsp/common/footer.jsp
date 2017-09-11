@@ -37,11 +37,11 @@
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="headline"><h2>网站导航</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="index.html#">书画教育</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="index.html#">书画欣赏</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="index.html#">书画商城</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="index.html#">新闻中心</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="index.html#">关于我们</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">书画教育</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">书画赏析</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">书画商城</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">新闻中心</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">关于我们</a><i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div><!--/col-md-3-->
                     <!-- End Link List -->                    

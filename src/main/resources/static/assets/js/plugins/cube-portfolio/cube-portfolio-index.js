@@ -6,11 +6,12 @@
         wrap, filtersCallback;
 
 
+	
     /*********************************
         init cubeportfolio
      *********************************/
     gridContainer.cubeportfolio({
-        defaultFilter: '*',
+        defaultFilter: '.report',
         animationType: 'slideLeft',
         gapHorizontal: 20,
         gapVertical: 20,

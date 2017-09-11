@@ -29,7 +29,7 @@
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<!-- Home -->
-				<li class="active"><a href="index.html"
+				<li class="active"><a href="/index.html"
 					class="dropdown-toggle" data-toggle="dropdown"> 首页 </a></li>
 				<!-- End Home -->
 
@@ -45,27 +45,27 @@
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>书法教材</h3></li>
-												<li><a href="#"><i class="fa fa-sort-alpha-asc"></i> 作者团队</a></li>
-												<li><a href="#"><i class="fa fa-magic"></i> 教材视频</a></li>
-												<li><a href="#"><i class="fa fa-ellipsis-h"></i> 使用学校</a></li>
+												<li><a href="/author-team/"><i class="fa fa-sort-alpha-asc"></i> 作者团队</a></li>
+												<li><a href="/teaching-video/"><i class="fa fa-magic"></i> 教材视频</a></li>
+												<li><a href="/school/"><i class="fa fa-ellipsis-h"></i> 使用学校</a></li>
 											</ul>
 										</div>
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>视频教学</h3></li>
 												<!-- 楷书 -->
-												<li><a href="#"><i class="fa fa-bars"></i> 楷书视频</a></li>
+												<li><a href="/video/regular/"><i class="fa fa-bars"></i> 楷书视频</a></li>
 												<!-- End 楷书 -->
 												<!-- Icons -->
-												<li><a href="#"><i
+												<li><a href="/video/jiuchenggong/"><i
 														class="fa fa-chevron-circle-right"></i> 欧阳询《九成宫》90集</a></li>
-												<li><a href="#"><i
+												<li><a href="/video/yanqinglibei/"><i
 														class="fa fa-chevron-circle-right"></i> 颜真卿《颜勤礼碑》90集</a></li>
-												<li><a href="#"><i
+												<li><a href="/video/duobaotabei/"><i
 														class="fa fa-chevron-circle-right"></i> 颜真卿《多宝塔碑》90集</a></li>
-												<li><a href="#"><i
+												<li><a href="/video/xuanmitabei/"><i
 														class="fa fa-chevron-circle-right"></i> 柳公权《玄密塔碑》90集</a></li>
-												<li><a href="#"><i
+												<li><a href="/video/sanmenji/"><i
 														class="fa fa-chevron-circle-right"></i> 赵孟頫《三门记》90集</a></li>
 
 												<!-- End Icons -->
@@ -79,10 +79,10 @@
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>十六宫格书画临摹</h3></li>
 												<!-- 十六宫格书画临摹 -->
-												<li><a href="#"><i class="fa fa-list-ol"></i> 书法临摹方法</a></li>
-												<li><a href="#"><i class="fa fa-image"></i> 绘画临摹方法</a></li>
-												<li><a href="#"><i class="fa fa-dot-circle-o"></i> 整碑临摹方法</a></li>
-												<li><a href="#"><i class="fa fa-dot-circle-o"></i> 整画临摹方法</a></li>
+												<li><a href="/video/calligraphy/"><i class="fa fa-list-ol"></i> 书法临摹方法</a></li>
+												<li><a href="/video/painting/"><i class="fa fa-image"></i> 绘画临摹方法</a></li>
+												<li><a href="/video/tablet/"><i class="fa fa-dot-circle-o"></i> 整碑临摹方法</a></li>
+												<li><a href="/video/picture/"><i class="fa fa-dot-circle-o"></i> 整画临摹方法</a></li>
 												<!-- End 十六宫格书画临摹 -->
 											</ul>
 										</div>
@@ -90,9 +90,9 @@
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>书画学校</h3></li>
 												<!-- campus -->
-												<li><a href="#"><i class="fa fa-map-marker"></i> 学校地图</a></li>
-												<li><a href="#"><i class="fa fa-bars"></i> 师资团队</a></li>
-												<li><a href="#"><i class="fa fa-bars"></i> 学员作品</a></li>
+												<li><a href="/map/"><i class="fa fa-map-marker"></i> 学校地图</a></li>
+												<li><a href="/team/"><i class="fa fa-bars"></i> 师资团队</a></li>
+												<li><a href="/works/"><i class="fa fa-bars"></i> 学员作品</a></li>
 												<!-- End campus -->
 											</ul>
 										</div>
@@ -110,14 +110,14 @@
 					<ul class="dropdown-menu">
 						<li class="dropdown-submenu"><a href="javascript:void(0);">书法碑帖</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">历代名碑 </a></li>
-								<li><a href="#">历代名帖 </a></li>
+								<li><a href="/mingbie/">历代名碑 </a></li>
+								<li><a href="/mingtie/">历代名帖 </a></li>
 							</ul>
 						</li>
 						<li class="dropdown-submenu"><a href="javascript:void(0);">书画</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">历代中外名画</a></li>
-								<li><a href="#">当代书画</a></li>
+								<li><a href="/famous-paintings/">历代中外名画</a></li>
+								<li><a href="/contemporary-painting/">当代书画</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -128,9 +128,9 @@
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 书画商城 </a>
 					<ul class="dropdown-menu">
-						<li><a href="#">书画用品</a></li>
-						<li><a href="#">图书</a></li>
-						<li><a href="#">文化用品</a></li>
+						<li><a href="/supplies/">书画用品</a></li>
+						<li><a href="/books/">图书</a></li>
+						<li><a href="/stationery/">文化用品</a></li>
 					</ul></li>
 				<!-- End Mall Pages-->
 
@@ -139,9 +139,9 @@
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 新闻中心 </a>
 					<ul class="dropdown-menu">
-						<li><a href="#">网站公告</a></li>
-						<li><a href="#">活动资讯</a></li>
-						<li><a href="news.html#report">新闻报道</a></li>
+						<li><a href="/notice/">网站公告</a></li>
+						<li><a href="/activity/">活动资讯</a></li>
+						<li><a href="/report/">新闻报道</a></li>
 					</ul></li>
 				<!-- End News Pages-->
 				
@@ -149,8 +149,8 @@
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 关于我们 </a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="#">关于十六宫格</a></li>
-						<li><a href="#">诚聘英才</a></li>
+						<li><a href="/shiliugongge/">关于十六宫格</a></li>
+						<li><a href="/join-us/">诚聘英才</a></li>
 
 					</ul></li>
 				<!-- End About Pages -->
