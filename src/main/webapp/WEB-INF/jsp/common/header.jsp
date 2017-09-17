@@ -53,6 +53,8 @@
 										<div class="col-md-3 equal-height-in">
 											<ul class="list-unstyled equal-height-list">
 												<li><h3>视频教学</h3></li>
+												<!-- 七年级上册视频 -->
+												<li><a href="/book/grade7/"><i class="fa fa-bars"></i> 七年级上册</a></li>
 												<!-- 楷书 -->
 												<li><a href="/video/regular/"><i class="fa fa-bars"></i> 楷书视频</a></li>
 												<!-- End 楷书 -->
@@ -134,6 +136,15 @@
 					</ul></li>
 				<!-- End Mall Pages-->
 
+				<!-- News Pages -->
+				<li class="dropdown"><a href="javascript:void(0);"
+					class="dropdown-toggle" data-toggle="dropdown"> 学生作品 </a>
+					<ul class="dropdown-menu">
+						<li><a href="/notice/">作品欣赏</a></li>
+						<li><a href="/report/">上传作品</a></li>
+					</ul></li>
+				<!-- End News Pages-->
+				
 
 				<!-- News Pages -->
 				<li class="dropdown"><a href="javascript:void(0);"
