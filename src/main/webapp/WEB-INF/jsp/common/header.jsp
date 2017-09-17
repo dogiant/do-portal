@@ -136,7 +136,7 @@
 					</ul></li>
 				<!-- End Mall Pages-->
 
-				<!-- News Pages -->
+				<!-- News Pages 
 				<li class="dropdown"><a href="javascript:void(0);"
 					class="dropdown-toggle" data-toggle="dropdown"> 学生作品 </a>
 					<ul class="dropdown-menu">

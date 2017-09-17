@@ -114,7 +114,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 	<div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" width="249" height="142">
+                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" >
                         </div>
                         <a class="btn-more hover-effect" href="/article/${obj.id}.html">观看视频 +</a>					
                     </div>
@@ -126,7 +126,7 @@
             </div>
             
             </c:forEach>
-            </div>
+         </div>
             <!-- 
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
@@ -189,7 +189,7 @@
     	<!-- End Recent Works -->
 
         <!--名师风采 start -->
-         <div class="headline"><h2>名师风采</h2></div>
+        <div class="headline"><h2>名师风采</h2></div>
         <div class="row margin-bottom-20">
 			<c:forEach items="${recommendItem}" var="obj">
             
@@ -209,7 +209,7 @@
             </div>
             
             </c:forEach>
-            </div>
+        </div>
         <!-- 名师风采 end -->
     	<!-- Info Blokcs -->
     	<div class="row margin-bottom-30">
@@ -226,40 +226,37 @@
                 <div id="grid-container" >
                 	<div class="cbp-item report">
                     	<div class="row">
-                        <div class="col-md-4">
-                            <img src="/assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
-                        </div>
-                        <div class="col-md-8">
-                            <h4>诗书画印重识启功</h4>
-                            <p>　　今年的7月26日，是启功先生百年诞辰，由北京师范大学主办的“启功遗墨——启功先生书画作品展览”同日于国家博物馆开幕。同时，《启功全集》也于26日举行了首发式。本次北师大将活动定义为重新认识启功，意欲展示诗书画印全才的多面启功。</p>                        
-                        </div>
-                    </div>
-                  </div>
+	                        <div class="col-md-4">
+	                            <img src="/assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
+	                        </div>
+	                        <div class="col-md-8">
+	                            <h4>诗书画印重识启功</h4>
+	                            <p>　　今年的7月26日，是启功先生百年诞辰，由北京师范大学主办的“启功遗墨——启功先生书画作品展览”同日于国家博物馆开幕。同时，《启功全集》也于26日举行了首发式。本次北师大将活动定义为重新认识启功，意欲展示诗书画印全才的多面启功。</p>                        
+	                        </div>
+                    	</div>
+                  	</div>
                   
+					<div class="cbp-item activity">
+	                    <div class="row">
+	                        <div class="col-md-12">
+	                            <h4>第六届中国书坛新人作品展览征稿启事</h4>
+	                            <p>　　为贯彻落实党的十七大精神，推动书法艺术大发展大繁荣，适应书法新人发展的需要，经申办和协商，中国书法家协会决定举办第六届中国书坛新人作品展览。</p>                        
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                        
+	                <div class="cbp-item notice">
+	                    <div class="row">
+	                        <div class="col-md-12">
+	                            <h4>飞龙十六宫格网站升级公告</h4>
+	                            <p>　　本网自开通以来，受到了广大学生、书法爱好者的广泛关注。即日起，网站将更加及时的发布信息、让更加丰富的内容呈现给大家。 </p>
+	                            <p>　　升级后的网站，在活动资讯栏目中，我们将为您呈现业界重大活动。在新闻报道栏目中，我们将及时报道动态书法信息，反映当代书坛。</p>                        
+	                        </div>
+	                    </div>
+	                </div>  
                   
-				 <div class="cbp-item activity">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4>第六届中国书坛新人作品展览征稿启事</h4>
-                            <p>　　为贯彻落实党的十七大精神，推动书法艺术大发展大繁荣，适应书法新人发展的需要，经申办和协商，中国书法家协会决定举办第六届中国书坛新人作品展览。</p>                        
-                        </div>
-                    </div>
-                 </div>
-
-                        
-                 <div class="cbp-item notice">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4>飞龙十六宫格网站升级公告</h4>
-                            <p>　　本网自开通以来，受到了广大学生、书法爱好者的广泛关注。即日起，网站将更加及时的发布信息、让更加丰富的内容呈现给大家。 </p>
-                            <p>　　升级后的网站，在活动资讯栏目中，我们将为您呈现业界重大活动。在新闻报道栏目中，我们将及时报道动态书法信息，反映当代书坛。</p>                        
-                        </div>
-                    </div>
-                 </div>  
-                  
-              </div>  
+              	</div>  
 						
             </div>
             <!--/col-md-8-->        
