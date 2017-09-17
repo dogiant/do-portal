@@ -114,13 +114,13 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 	<div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" >
+                            <img class="img-responsive" src="http://file.feilongshiliugongge.com/${obj.coverPicUrl }" alt="" >
                         </div>
                         <a class="btn-more hover-effect" href="/article/${obj.id}.html">观看视频 +</a>					
                     </div>
                     <div class="caption">
                         <h3><a class="hover-effect" href="/article/${obj.id}.html">${obj.title }</a></h3>
-                        <p>${obj.content }</p>
+                        <p>${obj.digest }</p>
                     </div>
                 </div>
             </div>
@@ -197,13 +197,13 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 	<div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" width="249" height="142">
+                            <img class="img-responsive" src="http://file.feilongshiliugongge.com/${obj.coverPicUrl }" alt="">
                         </div>
                         <a class="btn-more hover-effect" href="/article/${obj.id}.html">查看详情</a>					
                     </div>
                     <div class="caption">
                         <h3><a class="hover-effect" href="/article/${obj.id}.html">${obj.title }</a></h3>
-                        <p>${obj.content }</p>
+                        <p>${obj.digest }</p>
                     </div>
                 </div>
             </div>
