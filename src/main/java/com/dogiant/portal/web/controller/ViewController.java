@@ -68,6 +68,7 @@ public class ViewController {
 			
 			model.put("brief_intro", brief_intro);
 
+			
 			model.put("news_report", news_report);
 			model.put("news_activity", news_activity);
 			model.put("news_notice", news_notice);
@@ -218,6 +219,17 @@ public class ViewController {
 	public String bookCategory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
 			@PathVariable("catCode") String catCode, @RequestParam(value = "pageNo", required = false) String pageNo) {
 		logger.info("catCode==" + catCode);
+		
+		// 获取面包屑导航
+		List<ArticleCatDTO> articleCatList = null;
+		try {
+			articleCatList = dataIntegrationService.getCrumbsArticleCats(catCode);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.put("crumbs", articleCatList);
+
+		
 		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
 		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
 		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");

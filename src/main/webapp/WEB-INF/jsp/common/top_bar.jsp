@@ -18,10 +18,10 @@
                     
                     <li class="topbar-devider"></li>   
                     <li><a href="#">Help</a></li>  
-                    
+                    -->
                     <li><a href="#">注册</a></li> 
                     <li class="topbar-devider"></li>   
                     <li><a href="#">登录</a></li>  
-                    --> 
+                     
                 </ul>
             </div>
