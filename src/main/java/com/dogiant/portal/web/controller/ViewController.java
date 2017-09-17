@@ -164,6 +164,22 @@ public class ViewController {
 		model.put("pagedResult", pagedResult);
 		return "list-page-video";
 	}
+	
+	/**
+	 * 七年级上册视频
+	 * @param request
+	 * @param response
+	 * @param model
+	 * @param catCode
+	 * @param pageNo
+	 * @return
+	 */
+	@RequestMapping(value = "/book/{catCode}/", method = RequestMethod.GET)
+	public String bookCategory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
+			@PathVariable("catCode") String catCode, @RequestParam(value = "pageNo", required = false) String pageNo) {
+		logger.info("catCode==" + catCode);
+		return "list-page-book";
+	}
 
 	@RequestMapping(value = "/{catCode}/", method = RequestMethod.GET)
 	public String category(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
