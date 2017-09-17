@@ -75,7 +75,7 @@
                 <h2><i>宋一夫老师讲书法</i> <br /> </h2>
                 <p><i>给同学们讲解十六宫格的使用方法</i></p>
                 <div class="da-img">
-                    <iframe src="https://playvideo.qcloud.com/vod/9031868223000025609/iplayer.html?appid=1253949274&fileid=9031868223000025609&autoplay=0&sw=1920&sh=1080" frameborder="0" width="530" height="300" scrolling="no"></iframe>	<!-- 页面内多处使用iframe代码，后面的JS代码只需要使用一次(作用是调整iframe的高度) -->	<script src="//imgcache.qq.com/open/qcloud/video/h5/fixifmheight.js" charset="utf-8"></script>
+                    <iframe src="http://playvideo.qcloud.com/vod/9031868223000025609/iplayer.html?appid=1253949274&fileid=9031868223000025609&autoplay=0&sw=1920&sh=1080" frameborder="0" width="530" height="300" scrolling="no"></iframe>	<!-- 页面内多处使用iframe代码，后面的JS代码只需要使用一次(作用是调整iframe的高度) -->	<script src="//imgcache.qq.com/open/qcloud/video/h5/fixifmheight.js" charset="utf-8"></script>
                 </div>
             </div>
             <div class="da-arrows">
