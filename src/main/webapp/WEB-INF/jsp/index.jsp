@@ -126,6 +126,7 @@
             </div>
             
             </c:forEach>
+            </div>
             <!-- 
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
@@ -187,6 +188,29 @@
          -->
     	<!-- End Recent Works -->
 
+        <!--名师风采 start -->
+         <div class="headline"><h2>名师风采</h2></div>
+        <div class="row margin-bottom-20">
+			<c:forEach items="${recommendItem}" var="obj">
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                	<div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="${obj.coverPicUrl }" alt="" width="249" height="142">
+                        </div>
+                        <a class="btn-more hover-effect" href="/article/${obj.id}.html">查看详情</a>					
+                    </div>
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="/article/${obj.id}.html">${obj.title }</a></h3>
+                        <p>${obj.content }</p>
+                    </div>
+                </div>
+            </div>
+            
+            </c:forEach>
+            </div>
+        <!-- 名师风采 end -->
     	<!-- Info Blokcs -->
     	<div class="row margin-bottom-30">
         	<!-- Welcome Block -->
