@@ -44,8 +44,8 @@ public class DataIntegrationServiceImpl implements DataIntegrationService {
 	}
 
 	@Override
-	public List<ArticleItemDTO> getLatestPost(int number) {
-		return cmsDataService.getLatestPost(number);
+	public List<ArticleItemDTO> getLatestPost(List<String> catCodes, int size) {
+		return cmsDataService.getLatestPost(catCodes, size);
 	}
 
 	@Override
@@ -59,8 +59,8 @@ public class DataIntegrationServiceImpl implements DataIntegrationService {
 	}
 	
 	@Override
-	public List<ArticleItemDTO> getRecommendItem(int size){
-		return cmsDataService.getRecommendItem(size);
+	public List<ArticleItemDTO> getRecommendItems(List<String> catCodes, int size){
+		return cmsDataService.getRecommendItems(catCodes, size);
 	}
 	
 }

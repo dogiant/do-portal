@@ -19,11 +19,11 @@ public interface DataIntegrationService {
 	
 	public ArticleItemDTO getArticleItemByCatCode(String code);
 
-	public List<ArticleItemDTO> getLatestPost(int number);
+	public List<ArticleItemDTO> getLatestPost(List<String> catCodes, int size);
 	
 	public PagedResult<ArticleItemDTO> getArticleItemsByCatCode(String code,Integer pageNo,Integer pageRows);
 
 	public ArticleItemDTO getArticleItemById(Long id);
 	
-	public List<ArticleItemDTO> getRecommendItem(int size);
+	public List<ArticleItemDTO> getRecommendItems(List<String> catCodes, int size);
 }

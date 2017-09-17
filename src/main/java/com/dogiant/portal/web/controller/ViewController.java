@@ -1,6 +1,7 @@
 package com.dogiant.portal.web.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -85,10 +86,12 @@ public class ViewController {
 			model.put("key_navigation", key_navigation);
 			model.put("contact_us", contact_us);
 			// 暂时先动态获取，后续考虑静态化处理
-
-			List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
+			List<ArticleItemDTO> latestPost = getLatestPost();
 			model.put("latestPost", latestPost);
-			List<ArticleItemDTO> recommendItem = dataIntegrationService.getRecommendItem(4);
+			List<String> videoCatCodes = new ArrayList<String>();
+			videoCatCodes.add("jiuchenggong");
+			
+			List<ArticleItemDTO> recommendItem = dataIntegrationService.getRecommendItems(videoCatCodes,4);
 			model.put("recommendItem", recommendItem);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -98,12 +101,25 @@ public class ViewController {
 		return "index";
 	}
 
+	/**
+	 * 从新闻中心获取最新三条发布的新闻
+	 * @return
+	 */
+	private List<ArticleItemDTO> getLatestPost() {
+		List<String> newsCatCodes = new ArrayList<String>();
+		newsCatCodes.add("notice");
+		newsCatCodes.add("report");
+		newsCatCodes.add("activity");
+		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(newsCatCodes,3);
+		return latestPost;
+	}
+
 	@RequestMapping(value = "/video/{catCode}/", method = RequestMethod.GET)
 	public String videoCategory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
 			@PathVariable("catCode") String catCode, @RequestParam(value = "pageNo", required = false) String pageNo) {
 		logger.info("catCode==" + catCode);
 
-		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
+		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 
 		// 获取栏目
@@ -172,7 +188,7 @@ public class ViewController {
 			@RequestParam(value = "pageRows", required = false, defaultValue = "10") int pageRows) {
 		logger.info("catCode==" + catCode);
 
-		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
+		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 
 		// 获取栏目
@@ -229,7 +245,7 @@ public class ViewController {
 			@PathVariable("id") long id) {
 		logger.info("param,id==" + id);
 
-		List<ArticleItemDTO> latestPost = dataIntegrationService.getLatestPost(3);
+		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 
 		// 获取正文页
