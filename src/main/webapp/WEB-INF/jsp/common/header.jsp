@@ -5,7 +5,7 @@
 <div class="header">
 	<div class="container">
 		<!-- Logo -->
-		<a class="logo" href="index.html"> <img
+		<a class="logo" href="/index.html"> <img
 			src="/assets/img/logo-opt.jpg" height="50" width="133" alt="Logo">
 		</a>
 		<!-- End Logo -->
@@ -29,8 +29,8 @@
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<!-- Home -->
-				<li class="active"><a href="index.html"
-					class="dropdown-toggle" data-toggle="dropdown"> 首页 </a></li>
+				<li class="active"><a href="/index.html"
+					class="dropdown-toggle"> 首页 </a></li>
 				<!-- End Home -->
 
 				<!-- Education -->
