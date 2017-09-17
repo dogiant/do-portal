@@ -93,7 +93,7 @@
 												<li><h3>书画学校</h3></li>
 												<!-- campus -->
 												<li><a href="/map/"><i class="fa fa-map-marker"></i> 学校地图</a></li>
-												<li><a href="/team/"><i class="fa fa-bars"></i> 师资团队</a></li>
+												<li><a href="/teacher/"><i class="fa fa-bars"></i> 名师风采</a></li>
 												<li><a href="/works/"><i class="fa fa-bars"></i> 学员作品</a></li>
 												<!-- End campus -->
 											</ul>

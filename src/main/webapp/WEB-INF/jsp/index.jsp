@@ -92,10 +92,10 @@
             <div class="row">
                 <div class="col-md-9 animated fadeInLeft">
                     <span>十六宫格简介</span>
-                    <p> “十六宫格”是在“田字格”“米字格”“九宫格”的基础上，创新的一种新型书写用格。使用“十六宫格”的长处，它将方块字进行最佳等距的分割，使书写者能在格中找到笔画及结构的准确位置，会对初学书法者起到事半功倍的效果。</p>
+                    <p>${brief_intro.content }</p>
                 </div>            
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="article.html" class="btn-u btn-u-lg"><i class="fa "></i> 点击了解十六宫格</a>
+                    <a href="/shiliugongge/" class="btn-u btn-u-lg"><i class="fa "></i> 点击了解十六宫格</a>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
     	<!-- Recent Works -->
         <div class="headline"><h2>视频教程</h2></div>
         <div class="row margin-bottom-20">
-			<c:forEach items="${recommendItem}" var="obj">
+			<c:forEach items="${recommendVideoItems}" var="obj">
             
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
@@ -191,7 +191,7 @@
         <!--名师风采 start -->
         <div class="headline"><h2>名师风采</h2></div>
         <div class="row margin-bottom-20">
-			<c:forEach items="${recommendItem}" var="obj">
+			<c:forEach items="${recommendTeacherItems}" var="obj">
             
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
