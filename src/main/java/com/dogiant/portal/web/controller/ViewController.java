@@ -60,13 +60,12 @@ public class ViewController {
 
 			SectionDTO appreciation = dataIntegrationService.getSectionByCode("appreciation");
 			SectionDTO cooperative_partner = dataIntegrationService.getSectionByCode("cooperative_partner");
-			SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
-			SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
-			SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+			
 
 			model.put("slider_1", slider_1);
 			model.put("slider_2", slider_2);
 			model.put("slider_3", slider_3);
+			
 			model.put("brief_intro", brief_intro);
 
 			model.put("news_report", news_report);
@@ -76,9 +75,15 @@ public class ViewController {
 			model.put("appreciation", appreciation);
 			model.put("cooperative_partner", cooperative_partner);
 			
+			SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+			SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+			SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+			SectionDTO our_services = dataIntegrationService.getSectionByCode("our_services");
+			
 			model.put("qr_code", qr_code);
 			model.put("key_navigation", key_navigation);
 			model.put("contact_us", contact_us);
+			model.put("our_services", our_services);
 			// 暂时先动态获取，后续考虑静态化处理
 			List<ArticleItemDTO> latestPost = getLatestPost();
 			model.put("latestPost", latestPost);
@@ -128,6 +133,16 @@ public class ViewController {
 			@PathVariable("catCode") String catCode, @RequestParam(value = "pageNo", required = false) String pageNo) {
 		logger.info("catCode==" + catCode);
 
+		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+		SectionDTO our_services = dataIntegrationService.getSectionByCode("our_services");
+		
+		model.put("qr_code", qr_code);
+		model.put("key_navigation", key_navigation);
+		model.put("contact_us", contact_us);
+		model.put("our_services", our_services);
+		// 暂时先动态获取，后续考虑静态化处理
 		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 
@@ -203,6 +218,16 @@ public class ViewController {
 	public String bookCategory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model,
 			@PathVariable("catCode") String catCode, @RequestParam(value = "pageNo", required = false) String pageNo) {
 		logger.info("catCode==" + catCode);
+		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+		
+		model.put("qr_code", qr_code);
+		model.put("key_navigation", key_navigation);
+		model.put("contact_us", contact_us);
+		// 暂时先动态获取，后续考虑静态化处理
+		List<ArticleItemDTO> latestPost = getLatestPost();
+		model.put("latestPost", latestPost);
 		return "list-page-book";
 	}
 
@@ -213,6 +238,16 @@ public class ViewController {
 			@RequestParam(value = "pageRows", required = false, defaultValue = "10") int pageRows) {
 		logger.info("catCode==" + catCode);
 
+		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+		SectionDTO our_services = dataIntegrationService.getSectionByCode("our_services");
+		
+		model.put("qr_code", qr_code);
+		model.put("key_navigation", key_navigation);
+		model.put("contact_us", contact_us);
+		model.put("our_services", our_services);
+		// 暂时先动态获取，后续考虑静态化处理
 		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 
@@ -270,6 +305,16 @@ public class ViewController {
 			@PathVariable("id") long id) {
 		logger.info("param,id==" + id);
 
+		SectionDTO qr_code = dataIntegrationService.getSectionByCode("qr_code");
+		SectionDTO key_navigation = dataIntegrationService.getSectionByCode("key_navigation");
+		SectionDTO contact_us = dataIntegrationService.getSectionByCode("contact_us");
+		SectionDTO our_services = dataIntegrationService.getSectionByCode("our_services");
+		
+		model.put("qr_code", qr_code);
+		model.put("key_navigation", key_navigation);
+		model.put("contact_us", contact_us);
+		model.put("our_services", our_services);
+		// 暂时先动态获取，后续考虑静态化处理
 		List<ArticleItemDTO> latestPost = getLatestPost();
 		model.put("latestPost", latestPost);
 

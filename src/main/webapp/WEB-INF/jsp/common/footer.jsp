@@ -9,7 +9,11 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                       <img id="logo-footer" src="/assets/img/qrcode_for_gh_50abe7c69081_430.jpg" alt="" width="226">  
+                    	${qr_code.content }
+                       <!--  
+                       <img id="logo-footer" src="/assets/img/qrcode_for_gh_50abe7c69081_430.jpg" alt="" width="226"> 
+                       -->
+                        
                     </div><!--/col-md-3-->
                     <!-- End About -->
 
@@ -31,7 +35,9 @@
                     
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>网站导航</h2></div>
+                        <div class="headline"><h2>重点导航</h2></div>
+                        ${key_navigation.content }
+                        <!--  
                         <ul class="list-unstyled link-list">
                             <li><a href="#">书画教育</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="#">书画赏析</a><i class="fa fa-angle-right"></i></li>
@@ -39,6 +45,7 @@
                             <li><a href="#">新闻中心</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="#">关于我们</a><i class="fa fa-angle-right"></i></li>
                         </ul>
+                        -->
                     </div><!--/col-md-3-->
                     <!-- End Link List -->                    
 
@@ -46,11 +53,14 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>联系我们</h2></div>                         
                         <address class="md-margin-bottom-40">
+                        ${contact_us.content }
+                        <!-- 
                             北京朝阳安贞胜古家园A座17层 <br />
                             北京飞龙十六宫文化艺术发展有限公司 <br />
                             电话: 800 123 3456 <br />
                             传真: 800 123 3456 <br />
                             电子邮件: <a href="mailto:info@feilongshiliugongge.com" class="">info@feilongshiliugongge.com</a>
+                        -->
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->

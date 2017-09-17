@@ -112,6 +112,9 @@
             	<!-- Our Services -->
                 <div class="who margin-bottom-30">
                     <div class="headline"><h2>我们的服务</h2></div>
+                    ${our_services.content }
+                    <!-- 
+                   
                     <p>我们提供优质的国学书法教育服务.</p>
                     <ul class="list-unstyled">
                         <li><a href="#"><i class="fa fa-desktop"></i>优质高清的教学视频</a></li>
@@ -119,6 +122,7 @@
                         <li><a href="#"><i class="fa fa-globe"></i>随时享用的互联网教学</a></li>
                         <li><a href="#"><i class="fa fa-group"></i>广泛分布的培训学校</a></li>
                     </ul>
+                    -->
                 </div>
 
 
