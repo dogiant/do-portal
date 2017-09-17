@@ -97,7 +97,11 @@ public class ViewController {
 			videoCatCodes.add("duobaotabei");
 			videoCatCodes.add("xuanmitabei");
 			videoCatCodes.add("sanmenji");
-
+			videoCatCodes.add("calligraphy");
+			videoCatCodes.add("painting");
+			videoCatCodes.add("tablet");
+			videoCatCodes.add("picture");
+			
 			List<ArticleItemDTO> recommendVideoItems = dataIntegrationService.getRecommendItems(videoCatCodes,4);
 			model.put("recommendVideoItems", recommendVideoItems);
 			
