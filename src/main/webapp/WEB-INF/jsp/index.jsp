@@ -227,7 +227,7 @@
                 	<div class="cbp-item report">
                     	<div class="row">
                         <div class="col-md-4">
-                            <img src="assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
+                            <img src="/assets/img/news/news1.jpg" class="img-responsive img-tab-space" alt="大法师的">                                
                         </div>
                         <div class="col-md-8">
                             <h4>诗书画印重识启功</h4>

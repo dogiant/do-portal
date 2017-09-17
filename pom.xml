@@ -6,7 +6,7 @@
 	<groupId>com.dogiant.portal</groupId>
 	<artifactId>do-portal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>do-portal</name>
 	<description>do-portal project by Spring Boot</description>
