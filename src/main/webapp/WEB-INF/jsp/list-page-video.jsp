@@ -107,7 +107,7 @@
 										<h3>
 											<a class="hover-effect" href="/article/${obj.id}.html">${obj.title}</a>
 										</h3>
-										<p>${obj.content}</p>
+										<p>${obj.digest}</p>
 									</div>
 								</div>
 							</div>
