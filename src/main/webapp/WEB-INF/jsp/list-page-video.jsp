@@ -99,7 +99,7 @@
 								<div class="thumbnails thumbnail-style thumbnail-kenburn">
 									<div class="thumbnail-img">
 										<div class="overflow-hidden">
-											<img class="img-responsive" src="${obj.coverPicUrl}" alt="">
+											<img class="img-responsive" src="http://file.feilongshiliugongge.com/${obj.coverPicUrl}" alt="">
 										</div>
 										<a class="btn-more hover-effect" href="/article/${obj.id}.html">观看视频 +</a>
 									</div>

@@ -88,7 +88,7 @@
 				<c:forEach items="${pagedResult.result}" var="article" varStatus="stat">
 					<div class="row margin-bottom-50 box">
 						<div class="col-sm-4 sm-margin-bottom-20">
-							<a href="/article/${article.id }.html"><img class="img-responsive" src="${article.coverPicUrl }" alt="${article.title }"></a>
+							<a href="/article/${article.id }.html"><img class="img-responsive" src="http://file.feilongshiliugongge.com/${article.coverPicUrl }" alt="${article.title }"></a>
 						</div>
 						<div class="col-sm-8">
 							<div class="blog-grid">
